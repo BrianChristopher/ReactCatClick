@@ -11,32 +11,53 @@ class App extends Component {
     cats,
     chosenCats: [],
     currentScore: 0,
-    highScore: 5
+    highScore: 0
   };
 
   handleCatClick = id => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    //const cats = this.state.cats.filter(cat => cat.id !== id);
-    // Set this.state.friends equal to the new friends array
-    //this.setState({ cats });
-    // console.log(this.state.currentScore)
-    // this.setState({ currentScore: this.state.currentScore + 1 });
-    // console.log(this.state.currentScore)
-    // this.handleHighScore(this.state.currentScore);
-    // console.log(` You clicked id ${id} | Current Score: ${this.state.currentScore} | High Score; ${this.state.highScore}`)
+    if (this.state.chosenCats.includes(id)) {
+      //This checks if the cat has already been chosen.
+      //A MESSAGE WOULD BE NICE HERE
+      alert("Meow! You have already clicked that cat.")
+      this.handleReset();
+    } else {
+      //If the cat has not been chosen, add it's id to the array
+      let idArray = [];
+      idArray = this.state.chosenCats;
+      idArray.push(id);
+      this.setState({ chosenCats: idArray });
+      console.log(this.state.chosenCats);
 
-    // ()
+      //Update the score
+      this.state.currentScore <= this.state.highScore - 1
+        ? this.setState({ currentScore: this.state.currentScore + 1 })
+        : this.setState({
+            currentScore: this.state.currentScore + 1,
+            highScore: this.state.highScore + 1
+          });
 
-    //Handle the Score
+      //Shuffle the cat cards
+      let catArrayShuffle = this.state.cats;
+      //This is Fisher-Yates shuffle (copied from https://javascript.info/task/shuffle)
+      for (let i = catArrayShuffle.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
+        [catArrayShuffle[i], catArrayShuffle[j]] = [
+          catArrayShuffle[j],
+          catArrayShuffle[i]
+        ]; // swap elements
+      }
+      this.setState({cats:catArrayShuffle})
 
-    this.state.currentScore <= (this.state.highScore -1)
-      ? this.setState({ currentScore: this.state.currentScore + 1 })
-      : this.setState({
-          currentScore: this.state.currentScore + 1,
-          highScore: this.state.highScore + 1
-        });
+      // Check this.state.chosenCats for cats with an id not equal to the id being removed
+      //const cats = this.state.cats.filter(cat => cat.id !== id);
+      // Set this.state.friends equal to the new friends array
+      //this.setState({ cats });
+    }
   };
 
+  handleReset = () => {
+    this.setState({ chosenCats: [], currentScore: 0 });
+  };
 
   // shuffleCatCards = () => {
   //   console.log("Shuffle called");

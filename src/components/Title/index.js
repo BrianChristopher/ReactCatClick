@@ -1,10 +1,10 @@
 import React from "react";
-// import "./style.css";
+import "./style.css";
 
 function Title(props) {
   return (
     <div className="container">
-      <div className="jumbotron">
+      <div className="jumbotron p-2">
         <div className="container">
           <h1 className="display-4">Cute Cat Click Conundrum</h1>
           <p className="lead">Pick pussycats purr-fectly.</p>
