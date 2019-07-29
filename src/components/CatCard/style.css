@@ -1,0 +1,13 @@
+/* .card {
+    width: 18rem;
+}
+ */
+
+.card {
+    margin: 10px;
+    width: 250px;
+  }
+  img {
+      height: 100%;
+      width: auto;
+  }

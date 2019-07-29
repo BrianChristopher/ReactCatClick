@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "cat1",
+    "image": "./assets/images/cat1.png"
+  },
+  {
+    "id": 2,
+    "name": "cat2",
+    "image": "./assets/images/cat2.png"
+  },
+  {
+    "id": 3,
+    "name": "cat3",
+    "image": "./assets/images/cat3.png"
+  },
+  {
+    "id": 4,
+    "name": "cat4",
+    "image": "./assets/images/cat4.png"
+  },
+  {
+    "id": 5,
+    "name": "cat5",
+    "image": "./assets/images/cat5.png"
+  },
+  {
+    "id": 6,
+    "name": "cat6",
+    "image": "./assets/images/cat6.png"
+  },
+  {
+    "id": 7,
+    "name": "cat7",
+    "image": "./assets/images/cat7.png"
+  },
+  {
+    "id": 8,
+    "name": "cat8",
+    "image": "./assets/images/cat8.png"
+  },
+  {
+    "id": 9,
+    "name": "cat9",
+    "image": "./assets/images/cat9.png"
+  },
+  {
+    "id": 10,
+    "name": "cat10",
+    "image": "./assets/images/cat10.png"
+  },
+  {
+    "id": 11,
+    "name": "cat11",
+    "image": "./assets/images/cat11.png"
+  },
+  {
+    "id": 12,
+    "name": "cat12",
+    "image": "./assets/images/cat12.png"
+  }
+]
