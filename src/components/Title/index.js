@@ -16,7 +16,7 @@ function Title(props) {
               <h2>
                 Your score:
                 <span className="badge badge-secondary m6">
-                  {props.currentScore}99
+                  {props.currentScore}
                 </span>
               </h2>
             </div>
@@ -24,7 +24,7 @@ function Title(props) {
               <h2>
                 High score:
                 <span className="badge badge-secondary">
-                  {props.highScore}99
+                  {props.highScore}
                 </span>
               </h2>
             </div>

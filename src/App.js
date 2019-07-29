@@ -10,17 +10,33 @@ class App extends Component {
   state = {
     cats,
     chosenCats: [],
-    currentScore: 37,
-    highScore: 37
+    currentScore: 0,
+    highScore: 5
   };
 
-  checkCat = id => {
+  handleCatClick = id => {
     // Filter this.state.friends for friends with an id not equal to the id being removed
     //const cats = this.state.cats.filter(cat => cat.id !== id);
     // Set this.state.friends equal to the new friends array
     //this.setState({ cats });
-    alert("You clicked id " + id);
+    // console.log(this.state.currentScore)
+    // this.setState({ currentScore: this.state.currentScore + 1 });
+    // console.log(this.state.currentScore)
+    // this.handleHighScore(this.state.currentScore);
+    // console.log(` You clicked id ${id} | Current Score: ${this.state.currentScore} | High Score; ${this.state.highScore}`)
+
+    // ()
+
+    //Handle the Score
+
+    this.state.currentScore <= (this.state.highScore -1)
+      ? this.setState({ currentScore: this.state.currentScore + 1 })
+      : this.setState({
+          currentScore: this.state.currentScore + 1,
+          highScore: this.state.highScore + 1
+        });
   };
+
 
   // shuffleCatCards = () => {
   //   console.log("Shuffle called");
@@ -30,17 +46,20 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title >{this.state.cats.currentScore}</Title>
+        <Title
+          currentScore={this.state.currentScore}
+          highScore={this.state.highScore}
+        />
         <GameArea>
-        {this.state.cats.map(cat => (
-          <CatCard
-            checkCat={this.checkCat}
-            id={cat.id}
-            key={cat.id}
-            name={cat.name}
-            image={cat.image}
-          />
-        ))}
+          {this.state.cats.map(cat => (
+            <CatCard
+              handleCatClick={this.handleCatClick}
+              id={cat.id}
+              key={cat.id}
+              name={cat.name}
+              image={cat.image}
+            />
+          ))}
         </GameArea>
       </Wrapper>
     );
