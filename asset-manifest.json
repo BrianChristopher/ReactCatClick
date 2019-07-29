@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ReactCatClick/static/css/main.806ce17e.chunk.css",
+    "main.js": "/ReactCatClick/static/js/main.6a83a516.chunk.js",
+    "main.js.map": "/ReactCatClick/static/js/main.6a83a516.chunk.js.map",
+    "runtime~main.js": "/ReactCatClick/static/js/runtime~main.38f42744.js",
+    "runtime~main.js.map": "/ReactCatClick/static/js/runtime~main.38f42744.js.map",
+    "static/js/2.6efc73d3.chunk.js": "/ReactCatClick/static/js/2.6efc73d3.chunk.js",
+    "static/js/2.6efc73d3.chunk.js.map": "/ReactCatClick/static/js/2.6efc73d3.chunk.js.map",
+    "index.html": "/ReactCatClick/index.html",
+    "precache-manifest.8eebacaf52fe301d26da95b41a5fea9d.js": "/ReactCatClick/precache-manifest.8eebacaf52fe301d26da95b41a5fea9d.js",
+    "service-worker.js": "/ReactCatClick/service-worker.js",
+    "static/css/main.806ce17e.chunk.css.map": "/ReactCatClick/static/css/main.806ce17e.chunk.css.map"
+  }
+}
